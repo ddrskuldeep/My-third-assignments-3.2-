@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    },
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    }
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": "Q1. Create a python program to sort the given list of tuples based on integer value using a\nlambda function.\n[('Sachin Tendulkar', 34357), ('Ricky Ponting', 27483), ('Jack Kallis', 25534), ('Virat Kohli', 24936)]",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "l = [('Sachin Tendulkar', 34357), ('Ricky Ponting', 27483), ('Jack Kallis', 25534), ('Virat Kohli', 24936)]\nl.sort(key=lambda x: x[1])\nprint(l)\n\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "[('Virat Kohli', 24936), ('Jack Kallis', 25534), ('Ricky Ponting', 27483), ('Sachin Tendulkar', 34357)]\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": "Q2. Write a Python Program to find the squares of all the numbers in the given list of integers using\nlambda and map functions.\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "l1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nl1 = list(map(lambda x: x ** 2, l1))\nprint(l1)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": "Q3. Write a python program to convert the given list of integers into a tuple of strings. Use map and\nlambda functions\nGiven String: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nExpected output: ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10')",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nl = tuple(map(lambda x: str(x), l))\nprint(l)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "('1', '2', '3', '4', '5', '6', '7', '8', '9', '10')\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": "Q4. Write a python program using reduce function to compute the product of a list containing numbers\nfrom 1 to 25.",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "\nl = list(range(1, 25))\n\nproduct = reduce(lambda x, y: x * y, l)\n\nprint(product)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "620448401733239439360000\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": "Q5. Write a python program to filter the numbers in a given list that are divisible by 2 and 3 using the\nfilter function.\n[2, 3, 6, 9, 27, 60, 90, 120, 55, 46]",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "l = [2, 3, 6, 9, 27, 60, 90, 120, 55, 46]\nl = list(filter(lambda x: (x % 2 == 0 and x % 3 == 0), l))\nprint(l)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "[6, 60, 90, 120]\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": "Q6. Write a python program to find palindromes in the given list of strings using lambda and filter\nfunction.\n['python', 'php', 'aba', 'radar', 'level']",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "l = ['python', 'php', 'aba', 'radar', 'level']\npalindrome list = list(filter(lambda x: x == x[::-1], l))\nprint(palindrome list)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "ename": "<class 'SyntaxError'>",
+          "evalue": "invalid syntax (<ipython-input-20-21cbba27d108>, line 2)",
+          "traceback": [
+            "\u001b[0;36m  Cell \u001b[0;32mIn[20], line 2\u001b[0;36m\u001b[0m\n\u001b[0;31m    palindrome list = list(filter(lambda x: x == x[::-1], l))\u001b[0m\n\u001b[0m               ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ],
+          "output_type": "error"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
